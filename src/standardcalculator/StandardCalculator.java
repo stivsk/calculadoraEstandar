@@ -1,18 +1,18 @@
-package basiccalculator;
+package standardcalculator;
 
 /**
  *
  * @author calle
  */
 
-public class BasicCalculator {
+public class StandardCalculator {
         
     //Variables que almacenan los valores a operar
     //@data representa los digitos de la pantalla
     private static float result;
     private static String data, operation;
     
-    public BasicCalculator(){
+    public StandardCalculator(){
         data = "";
         result = 0;
         operation = "";
@@ -29,7 +29,7 @@ public class BasicCalculator {
     }
 
     public void setResult(float result) {
-        BasicCalculator.result = result;
+        StandardCalculator.result = result;
     }
 
     public String getOperation() {
@@ -37,11 +37,11 @@ public class BasicCalculator {
     }
 
     public void setOperation(String operation) {
-        BasicCalculator.operation = operation;
+        StandardCalculator.operation = operation;
     }
     
     public void setData(String data) {
-        BasicCalculator.data = data;   
+        StandardCalculator.data = data;   
     }
     
     //METODOS Y FUNCIONES

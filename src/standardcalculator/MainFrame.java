@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package basiccalculator;
+package standardcalculator;
 
 /**
  *
@@ -12,7 +12,7 @@ package basiccalculator;
 
 public class MainFrame extends javax.swing.JFrame {
     
-    BasicCalculator basic = new BasicCalculator();
+    StandardCalculator standard = new StandardCalculator();
     
     /**
      * Creates new form MainFrame
@@ -313,7 +313,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         btnOpRaiz.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        btnOpRaiz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/basiccalculator/sqrt.png"))); // NOI18N
+        btnOpRaiz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/standardcalculator/sqrt.png"))); // NOI18N
         btnOpRaiz.setToolTipText("");
         btnOpRaiz.setBorderPainted(false);
         btnOpRaiz.setContentAreaFilled(false);
@@ -428,54 +428,54 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btnNumOchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumOchoActionPerformed
         //Envia la equivalencia numerica de la tecla presionada
-        basic.NumPresionado(8);
+        standard.NumPresionado(8);
         //Establece los digitos de @txtEntrada actualizandolos cada vez que se ingresa un numero
-        txtEntrada.setText(basic.getData());
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumOchoActionPerformed
 
     private void btnNumCincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumCincoActionPerformed
-        basic.NumPresionado(5);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(5);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumCincoActionPerformed
 
     private void btnNumDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumDosActionPerformed
-        basic.NumPresionado(2);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(2);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumDosActionPerformed
 
     private void btnNumNueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumNueveActionPerformed
-        basic.NumPresionado(9);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(9);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumNueveActionPerformed
 
     private void btnNumUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumUnoActionPerformed
-        basic.NumPresionado(1);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(1);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumUnoActionPerformed
 
     private void btnOpDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpDividirActionPerformed
-        basic.opPresionada("/", txtEntrada.getText());
+        standard.opPresionada("/", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnOpDividirActionPerformed
 
     private void btnOpMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpMultiplicarActionPerformed
-        basic.opPresionada("*", txtEntrada.getText());
+        standard.opPresionada("*", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnOpMultiplicarActionPerformed
 
     private void btnOpSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpSumarActionPerformed
-        basic.opPresionada("+", txtEntrada.getText());
+        standard.opPresionada("+", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnOpSumarActionPerformed
 
     private void btnOpRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpRestarActionPerformed
-        basic.opPresionada("-", txtEntrada.getText());
+        standard.opPresionada("-", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnOpRestarActionPerformed
 
     private void btnNumCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumCeroActionPerformed
-        basic.NumPresionado("0");
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado("0");
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumCeroActionPerformed
 
     private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
@@ -483,53 +483,53 @@ public class MainFrame extends javax.swing.JFrame {
             Como ya se conoce el valor de la primer entrada y la operacion a realizar,
             se procede con el calculo del total
         */
-        String calculo = String.valueOf(basic.total(txtEntrada.getText()));
+        String calculo = String.valueOf(standard.total(txtEntrada.getText()));
         txtEntrada.setText(calculo);
     }//GEN-LAST:event_btnIgualActionPerformed
 
     private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
-        basic.NumPresionado(".");
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(".");
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnPuntoActionPerformed
 
     private void btnOpModuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpModuloActionPerformed
-        basic.opPresionada("%", txtEntrada.getText());
+        standard.opPresionada("%", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnOpModuloActionPerformed
 
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
-        basic.C(txtEntrada.getText());
+        standard.C(txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnCActionPerformed
 
     private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
-        basic.opPresionada("CE", txtEntrada.getText());
+        standard.opPresionada("CE", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnCEActionPerformed
 
     private void btnOpRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpRaizActionPerformed
-        basic.opPresionada("v/", txtEntrada.getText());
+        standard.opPresionada("v/", txtEntrada.getText());
         txtEntrada.setText("0");
     }//GEN-LAST:event_btnOpRaizActionPerformed
 
     private void btnNumSieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumSieteActionPerformed
-        basic.NumPresionado(7);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(7);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumSieteActionPerformed
 
     private void btnNumCuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumCuatroActionPerformed
-        basic.NumPresionado(4);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(4);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumCuatroActionPerformed
 
     private void btnNumSeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumSeisActionPerformed
-        basic.NumPresionado(6);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(6);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumSeisActionPerformed
 
     private void btnNumTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumTresActionPerformed
-        basic.NumPresionado(3);
-        txtEntrada.setText(basic.getData());
+        standard.NumPresionado(3);
+        txtEntrada.setText(standard.getData());
     }//GEN-LAST:event_btnNumTresActionPerformed
 
     private void txtEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEntradaActionPerformed
@@ -541,7 +541,7 @@ public class MainFrame extends javax.swing.JFrame {
         MainFrame basica = new MainFrame();
         
         basica.setVisible(true);
-        basica.setTitle("Calculadora Básica");
+        basica.setTitle("Calculadora Estándar");
         basica.setLocationRelativeTo(null);
     }
     
